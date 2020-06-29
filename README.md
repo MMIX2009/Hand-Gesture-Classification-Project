@@ -9,7 +9,7 @@ The idea is to be build a prediction model that will allow an application (game,
 # The dataset
 There are 64 samples x 3 axis (x, y, and z) for a total of 192 accelerometer values sampled at a rate of xx Hz from a wrist-mounted MPU6050 IMU.
 There are eight gesture captured: ['Hook','Idle','Jab','Okay','Stop','Thumbs Up','Uppercut','Wave'] with 50 to 60 sets of datapoints for each class/gesture. 
-The dataset has 437 rows in the entire datasets with  This should be enough to get reasonable accuracy from the image classification model. 
+There are 437 rows in the entire dataset. I think that will be enough to get reasonable accuracy (better than 70%) from the image classification model. 
 
 # Areas of improvement:
 More data: Ideally, there should be much more data available from more than a single subject to account for variations in how people perform those gestures. 
