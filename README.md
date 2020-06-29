@@ -1,16 +1,22 @@
 # Hand-Gesture-Classification-Project
 
-Classification of hand gestures using accelerometer readings from an intertial motion unit. The accelerometer values are captured in 2D spectrogram images. The use of spectrograms to represent the gestures captures the temporal nature of the data.
+Classification of hand gestures using accelerometer readings from an intertial motion unit. The accelerometer values are captured in 2D spectrogram images. The use of spectrograms to represent the gestures captures the temporal nature of the data. The classification will be performed by AWS Sagemaker ResNet Image Classifier.
+
+# Applications
+This particular dataset contains three boxing strikes (jab, hook, uppercut) and four common gestures (thumbs up, wave, stop, okay) and a generic "idle" gesture where none of the other seven gesture is performed.
+The idea is to be build a prediction model that will allow an application (game, training tool, etc.) to determine what gesture is being perform and take the appropriate action such as measuring the conformance to certain key performance indicators such as speed, power, accuracy, style, etc.
 
 # The dataset
 There are 64 samples x 3 axis (x, y, and z) for a total of 192 accelerometer values sampled at a rate of xx Hz from a wrist-mounted MPU6050 IMU.
 There are eight gesture captured: ['Hook','Idle','Jab','Okay','Stop','Thumbs Up','Uppercut','Wave'] with 50 to 60 sets of datapoints for each class/gesture. 
 The dataset has 437 rows in the entire datasets with  This should be enough to get reasonable accuracy from the image classification model. 
 
- enough information to classify eight distinct hand gestures. 
-
 # Areas of improvement:
 More data: Ideally, there should be much more data available from more than a single subject to account for variations in how people perform those gestures. 
 More Subjects: Another possible improvement is to generate synthetic data from the existing dataset since a preliminary analysis indicates that the x-, y-, z- axis from a given gesture are correlated.
 More sensors: the addition of gyroscope sensor data which is also available on the MPU6050 can help improve the accuracy of the model prediction although it would also add to the training time
+
+# Prior work:
+In a previous project, I had successfully classified the eight gesture by using a deep learning classifier (Tensorflow/Keras). I did not use a convolutional neural network and the input data was flattened thus losing the temporal and spatial relationships between the corresponding x-, y-, z-axis samples. 
+The hope is that this approah using SageMaker ResNet will be an improvement and provide a good foundation for a more sophisticated classifier with more gestures/classes and sensor samples.
 
