@@ -1,6 +1,6 @@
 # Hand-Gesture-Classification-Project
 
-Classification of hand gestures using accelerometer readings from an intertial motion unit. The accelerometer values are captured in 2D spectrogram images. The use of spectrograms to represent the gestures captures the temporal nature of the data. The classification will be performed by AWS Sagemaker ResNet Image Classifier.
+Classification of hand gestures using accelerometer readings from an intertial motion unit. The accelerometer values are captured in 2D spectrogram images. The use of spectrograms to represent the gestures captures the temporal nature of the data. The classification will be performed by AWS Sagemaker ResNet image classifier.
 
 # Applications
 This particular dataset contains three boxing strikes (jab, hook, uppercut) and four common gestures (thumbs up, wave, stop, okay) and a generic "idle" gesture where none of the other seven gesture is performed.
