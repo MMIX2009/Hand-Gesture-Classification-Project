@@ -17,6 +17,6 @@ More Subjects: Another possible improvement is to generate synthetic data from t
 More sensors: the addition of gyroscope sensor data which is also available on the MPU6050 can help improve the accuracy of the model prediction although it would also add to the training time
 
 # Prior work
-In a previous project, I had successfully classified the eight gesture by using a deep learning classifier (Tensorflow/Keras). I did not use a convolutional neural network and the input data was flattened thus losing the temporal and spatial relationships between the corresponding x-, y-, z-axis samples. 
-The hope is that this approah using SageMaker ResNet will be an improvement and provide a good foundation for a more sophisticated classifier with more gestures/classes and sensor samples.
+In a previous project, I had successfully classified the eight gestures by using a deep learning classifier (Tensorflow/Keras). I did not use a convolutional neural network and the input data was flattened thus losing the temporal and spatial relationships between the corresponding x-, y-, z-axis samples. 
+The hope is that this approah using SageMaker ResNet will be an improvement that will provide a good foundation for a more sophisticated classifier with more gestures/classes and sensor samples.
 
