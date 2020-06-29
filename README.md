@@ -11,12 +11,12 @@ There are 64 samples x 3 axis (x, y, and z) for a total of 192 accelerometer val
 There are eight gesture captured: ['Hook','Idle','Jab','Okay','Stop','Thumbs Up','Uppercut','Wave'] with 50 to 60 sets of datapoints for each class/gesture. 
 There are 437 rows in the entire dataset. I think that will be enough to get reasonable accuracy (better than 70%) from the image classification model. 
 
-# Areas of improvement:
+# Areas of improvement
 More data: Ideally, there should be much more data available from more than a single subject to account for variations in how people perform those gestures. 
 More Subjects: Another possible improvement is to generate synthetic data from the existing dataset since a preliminary analysis indicates that the x-, y-, z- axis from a given gesture are correlated.
 More sensors: the addition of gyroscope sensor data which is also available on the MPU6050 can help improve the accuracy of the model prediction although it would also add to the training time
 
-# Prior work:
+# Prior work
 In a previous project, I had successfully classified the eight gesture by using a deep learning classifier (Tensorflow/Keras). I did not use a convolutional neural network and the input data was flattened thus losing the temporal and spatial relationships between the corresponding x-, y-, z-axis samples. 
 The hope is that this approah using SageMaker ResNet will be an improvement and provide a good foundation for a more sophisticated classifier with more gestures/classes and sensor samples.
 
