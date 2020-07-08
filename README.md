@@ -11,6 +11,11 @@ There are 64 samples x 3 axis (x, y, and z) for a total of 192 accelerometer val
 There are eight gesture captured: ['Hook','Idle','Jab','Okay','Stop','Thumbs Up','Uppercut','Wave'] with 50 to 60 sets of datapoints for each class/gesture. 
 There are 437 rows in the entire dataset. I think that will be enough to get reasonable accuracy (better than 70%) from the image classification model. 
 
+Using a custom Python script, I created the spectrograms for each gesture's x, y, z accelerometer samples. The three spectrogram images were then concatenated horizontally to reduce the number of images to be processed by the deep learning network classifier. These images are stored in the corresponding gesture subfolder inside the spectrograms folder.
+
+# Preperation for AWS SageMaker
+The spectrogram images for each of the 436 gestures were uploaded to an AWS S3 bucket. Also, the included .lst files which indicate to SageMaker the 80/20 split between training and test images were uploaded to the same S3 bucket.
+
 # Areas of improvement
 More data: Ideally, there should be much more data available from more than a single subject to account for variations in how people perform those gestures. 
 More Subjects: Another possible improvement is to generate synthetic data from the existing dataset since a preliminary analysis indicates that the x-, y-, z- axis from a given gesture are correlated.
